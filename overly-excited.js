@@ -1,12 +1,11 @@
-// Create an array that contains the words in the sentence
+//added empty quotation marks to beginning of array so the for loop won't add character to first word
 let sentence = ["","The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
-/*
-    The addExcitement function should be an impure function, and accept
-    the array as the sole argument. It should iterate over the array
-    and output the words to the browser console.
-*/
-function addExcitement (theWordArray) {
+//replace exclamation marks from previous exercise to '@' symbol; made it a global variable
+let character = "@"
+
+//add new variable to function as an argument
+function addExcitement (theWordArray, character) {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -16,9 +15,10 @@ function addExcitement (theWordArray) {
         //if the current value of 'i' divided by 3 has no remainder,
         //add an exclamation point to the end of the word
         //and then concatenate it to 'buildMeUp'.
+        //included new 'character' argument
 
         if (i % 3 === 0 && i !== 0) {
-            buildMeUp = `${buildMeUp} ${theWordArray[i]}!`
+            buildMeUp = `${buildMeUp} ${theWordArray[i]} ${character}`
         }
 
         //Otherwise, just concatenate the word itself
@@ -34,4 +34,5 @@ function addExcitement (theWordArray) {
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence)
+
+addExcitement(sentence, character)
