@@ -1,5 +1,5 @@
 // Create an array that contains the words in the sentence
-let sentence = ["The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
+let sentence = ["","The","walrus","danced","through","the","trees","in","the","light","of","the","moon"];
 
 /*
     The addExcitement function should be an impure function, and accept
@@ -12,8 +12,21 @@ function addExcitement (theWordArray) {
     let buildMeUp = ""
 
     for (let i = 0; i < theWordArray.length; i++) {
-        // Concatenate the new word onto buildMeUp
-        buildMeUp = `${buildMeUp} ${theWordArray[i]}`
+
+        //if the current value of 'i' divided by 3 has no remainder,
+        //add an exclamation point to the end of the word
+        //and then concatenate it to 'buildMeUp'.
+
+        if (i % 3 === 0 && i !== 0) {
+            buildMeUp = `${buildMeUp} ${theWordArray[i]}!`
+        }
+
+        //Otherwise, just concatenate the word itself
+
+        else {
+            buildMeUp = `${buildMeUp} ${theWordArray[i]}`
+        }
+
         // Print buildMeUp to the console
         console.log(buildMeUp)
     }
