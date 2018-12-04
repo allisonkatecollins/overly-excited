@@ -5,7 +5,8 @@ let sentence = ["","The","walrus","danced","through","the","trees","in","the","l
 let character = "@"
 
 //add new variable to function as an argument
-function addExcitement (theWordArray, character) {
+//rewrite function using fat arrow
+addExcitement = (theWordArray, character) => {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -30,7 +31,7 @@ function addExcitement (theWordArray, character) {
         // Print buildMeUp to the console
         console.log(buildMeUp)
     }
-
+    return theWordArray;
 }
 
 // Invoke the function and pass in the array
